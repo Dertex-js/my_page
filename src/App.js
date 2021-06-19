@@ -1,18 +1,20 @@
+import React from "react";
 import './App.css';
 import Header from "./components/header/header";
-import Navbar from "./components/navbar/navbar";
-import Content from "./components/content/content";
+import News from "./components/content/news";
 import Footer from "./components/footer/footer";
+import {BrowserRouter, Route} from "react-router-dom";
 
 const App = () => {
-  return (
-    <div className="App">
-      <Header />
-      <Navbar />
-      <Content />
-      <Footer />
-    </div>
-  );
+    return (
+        <BrowserRouter>
+            <div className="app-wrapper">
+                <Header/>
+                <News />
+                <Footer/>
+            </div>
+        </BrowserRouter>
+    );
 }
 
 export default App;
